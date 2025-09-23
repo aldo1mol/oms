@@ -78,39 +78,25 @@ a {
     color: #fff;
     position: relative; 
     display: flex;
-    justify-content: space-between;
+    gap: 50px;
     flex-wrap: wrap;
   }
 
-.footer-20192 .cta h4{
-  font-size: 20px;
-  background-color: #2e572b;
-  padding: 10px;
-  text-align: center;
-  border-radius: 5px;
-  margin-right: 10px;
+
+.footer-20192 .container .col-sm{
+  font-size: 15px;
 }
 
-  .footer-20192 .cta p{
-    font-size: 15px;
-    margin-left: 20px;
-    font-weight: 700;
-  }
 
-  .footer-20192 .cta .get-location{
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-  }
 
-  .footer-20192 .cta .get-location a{
+  .footer-20192 .cta table tbody tr td .get-location a{
     margin: 0;
     padding: 0;
   }
 
-  .footer-20192 .cta .get-location a button{
+  .footer-20192 .branch table tbody tr td a button{
     width: 100%;
-    font-size: 13px;
+    font-size: 10px;
     padding: 5px;
     border-radius: 5px;
     color: #fff;
@@ -133,3 +119,39 @@ a {
         background-position: center;
         height: 225px;
       } */
+
+
+.footer-20192 .cta table{
+    background: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 1rem;
+    border-collapse: collapse;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.footer-20192 .cta th, td{
+    padding: 1rem;
+}
+
+.footer-20192 .cta table td{
+    text-align: center;
+}
+
+.footer-20192 .cta th{
+    /* background: rgba(16, 28, 57, 0.9); */
+    background: rgba(4, 27, 2, 0.9);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.footer-20192 .cta th{
+    background: rgba(0, 0, 0, 0.5);
+    text-align: left;
+}
+
+.footer-20192 .cta tr:nth-last-of-type(2n){
+    background: rgba(16, 15, 15, 0.7);
+}
