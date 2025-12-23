@@ -16,7 +16,7 @@
     <!-- header section starts -->
      <header class="header">
         <a href="#" class="logo">
-            <img src="img/logo-white.png" alt="">        
+            <img src="/img/logo-white.png" alt="">        
         </a>
 
         <nav class="navbar">
@@ -24,7 +24,7 @@
             <!-- <a href="#features">features</a> -->
             <a href="#products">products</a>
             <a href="#categories">categories</a>
-            <a href="#review">review</a>
+            <a href="#review" id="reviewLink">review</a>
             <a href="#contact">contact</a>
         </nav>
 
@@ -228,7 +228,7 @@
 
 
      <!-- footer -->
-      <footer id="footer" class="footer-20192">
+  <footer id="footer" class="footer-20192">
       <div class="site-section">
         <div class="container">
           <div id="contact" class="cta d-block d-md-flex align-items-center px-5">
@@ -291,23 +291,55 @@
             <div class="col-sm">
               <h3>Customers</h3>
               <ul class="list-unstyled links">
-                <li><a href="#">Buyer</a></li>
-                <li><a href="#">Supplier</a></li>
+                <li>
+                    <a href="#" class="footer-alert"
+                      data-title="Buyer Information"
+                      data-text="This section is for retailers, wholesalers, and distributors interested in purchasing our toothpaste products. We offer quality products, competitive pricing, and reliable supply.">
+                      Buyer
+                    </a>
+                  </li>  
+
+                   <li>
+                      <a href="#" class="footer-alert"
+                        data-title="Supplier Information"
+                        data-text="We collaborate with trusted suppliers for raw materials, packaging, and logistics. Our partnerships are built on quality, reliability, and long-term growth.">
+                        Supplier
+                      </a>
+                   </li>
               </ul>
             </div>
             <div class="col-sm">
               <h3>Company</h3>
               <ul class="list-unstyled links">
-                <li><a href="#">About us</a></li>
-                <li><a href="#">Careers</a></li>
+
+                <li><a href="#" class="footer-alert" 
+                  data-title="About Us" 
+                  data-text="James Ofosu Mensah 53 Enterprise is dedicated to promoting healthy smiles through quality toothpaste and oral care products that protect teeth and strengthen gums.">
+                  About us</a>
+                </li>
+
+                 <li><a href="#" class="footer-alert" 
+                    data-title="Careers" 
+                    data-text="We offer opportunities in sales, marketing, distribution, and customer service. Join our team and help spread healthy smiles across communities.">
+                    Careers</a>
+                  </li>
+
                 <li><a href="#">Contact us</a></li>
               </ul>
             </div>
             <div class="col-sm">
               <h3>Further Information</h3>
               <ul class="list-unstyled links">
-                <li><a href="#">Terms &amp; Conditions</a></li>
-                <li><a href="#">Privacy Policy</a></li>
+         <li><a href="#" class="footer-alert" 
+            data-title="Terms & Conditions" 
+            data-text="By using our website and products, you agree to our terms which govern usage, access, and service limitations for safety and fairness.">
+            Terms &amp; Conditions</a>
+          </li>
+          <li><a href="#" class="footer-alert" 
+              data-title="Privacy Policy" 
+              data-text="We respect your privacy and protect your personal information. Data collected is used only to improve our services and is never shared without consent.">
+              Privacy Policy</a>
+            </li>
               </ul>
             </div>
             <div class="col-md-3">
@@ -399,8 +431,29 @@
 </div>
 
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
-</body>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="review.js"></script>
+<script src="script.js"></script>
+<script>
+  // SWEET ALERT 
+    document.querySelectorAll('.footer-alert').forEach(link => {
+        link.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const title = this.getAttribute('data-title');
+        const text = this.getAttribute('data-text');
+
+        swal({
+            title: title,
+            text: text,
+            icon: "info",
+            button: "Close",
+        });
+        });
+    });
+</script>
+
+</body>
 </html>

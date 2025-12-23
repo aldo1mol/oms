@@ -602,3 +602,17 @@ section{
         font-size: 50%;
     }
 }
+
+
+  .swal-button {
+    background-color: #2e572b;
+  }
+
+  .swal-button:not([disabled]):hover {
+    background-color: #244723;
+  }
+
+
+  
+
+
